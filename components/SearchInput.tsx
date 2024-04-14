@@ -5,9 +5,9 @@ import InputBase from '@mui/material/InputBase';
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
   borderRadius: theme.shape.borderRadius,
-  backgroundColor: alpha(theme.palette.common.white, 0.15),
+  backgroundColor: alpha(theme.palette.common.black, 0.05),
   '&:hover': {
-    backgroundColor: alpha(theme.palette.common.white, 0.25),
+    backgroundColor: alpha(theme.palette.common.black, 0.07),
   },
   marginLeft: 0,
   width: '100%',
@@ -52,7 +52,7 @@ function SearchInput() {
       <StyledInputBase
         placeholder="Search…"
         inputProps={{ 'aria-label': 'search' }}
-        className=" pl-10"
+        className=" pl-10 py-1"
       />
     </Search>
   );

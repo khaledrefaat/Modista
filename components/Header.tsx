@@ -35,10 +35,7 @@ export default function Header() {
   return (
     <header>
       <HideOnScroll>
-        <AppBar
-          color="transparent"
-          sx={{ display: { xs: 'none', sm: 'block' } }}
-        >
+        <AppBar color="transparent">
           <Container>
             <Toolbar disableGutters>
               <Box className="mr-6">
@@ -46,13 +43,9 @@ export default function Header() {
                   <Image src="/logo.png" alt="logo" width={60} height={60} />
                 </Link>
               </Box>
-              <Box sx={{ flexGrow: 1, display: { xs: 'flex' } }}>
+              <Box sx={{ display: { xs: 'none', sm: 'flex' } }}>
                 {pages.map(page => (
-                  <Button
-                    key={page}
-                    sx={{ my: 2, color: 'white', display: 'block' }}
-                    className="hover:text-secondary"
-                  >
+                  <Button key={page} className="hover:text-secondary">
                     {page}
                   </Button>
                 ))}
@@ -62,12 +55,17 @@ export default function Header() {
                   flexGrow: 1,
                   display: { xs: 'flex' },
                   justifyContent: 'flex-end',
+                  alignItems: 'center',
                 }}
               >
                 <SearchInput />
                 <FavoriteBorderOutlinedIcon className={iconClasses} />
-                <ShoppingBagOutlinedIcon className={iconClasses} />
-                <PersonOutlineOutlinedIcon className={iconClasses} />
+                <ShoppingBagOutlinedIcon
+                  className={`${iconClasses} hidden sm:block`}
+                />
+                <PersonOutlineOutlinedIcon
+                  className={`${iconClasses} hidden sm:block`}
+                />
               </Box>
             </Toolbar>
           </Container>
