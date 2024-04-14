@@ -1,5 +1,4 @@
 'use client';
-
 import Container from './Container';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -21,7 +20,7 @@ function HideOnScroll(props: any) {
   const trigger = useScrollTrigger();
 
   return (
-    <Slide appear={false} direction="down" in={!trigger}>
+    <Slide appear={false} direction="down" in={!trigger} {...props}>
       {children}
     </Slide>
   );
@@ -46,18 +45,25 @@ export default function Header() {
     setAnchorElUser(null);
   };
 
+  const iconClasses =
+    'hover:text-secondary cursor-pointer ml-2 transition-colors duration-300';
+
   return (
     <header>
       <HideOnScroll>
-        <AppBar color="transparent">
+        <AppBar
+          color="transparent"
+          sx={{ display: { xs: 'none', sm: 'block' } }}
+        >
           <Container>
-            <Toolbar variant="dense">
-              <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+            <Toolbar>
+              <Box sx={{ flexGrow: 1, display: { xs: 'flex' } }}>
                 {pages.map(page => (
                   <Button
                     key={page}
                     onClick={handleCloseNavMenu}
                     sx={{ my: 2, color: 'white', display: 'block' }}
+                    className="hover:text-secondary"
                   >
                     {page}
                   </Button>
@@ -66,14 +72,14 @@ export default function Header() {
               <Box
                 sx={{
                   flexGrow: 1,
-                  display: { xs: 'none', md: 'flex' },
+                  display: { xs: 'flex' },
                   justifyContent: 'flex-end',
                 }}
               >
                 <SearchInput />
-                <FavoriteBorderOutlinedIcon />
-                <ShoppingBagOutlinedIcon />
-                <PersonOutlineOutlinedIcon />
+                <FavoriteBorderOutlinedIcon className={iconClasses} />
+                <ShoppingBagOutlinedIcon className={iconClasses} />
+                <PersonOutlineOutlinedIcon className={iconClasses} />
               </Box>
             </Toolbar>
           </Container>
