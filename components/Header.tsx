@@ -12,6 +12,8 @@ import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined
 
 import { useState } from 'react';
 import SearchInput from './SearchInput';
+import Image from 'next/image';
+import Link from 'next/link';
 
 const pages = ['Home', 'Categories', 'Shop'];
 
@@ -27,24 +29,6 @@ function HideOnScroll(props: any) {
 }
 
 export default function Header() {
-  const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);
-  const [anchorElUser, setAnchorElUser] = useState<null | HTMLElement>(null);
-
-  const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
-    setAnchorElNav(event.currentTarget);
-  };
-  const handleOpenUserMenu = (event: React.MouseEvent<HTMLElement>) => {
-    setAnchorElUser(event.currentTarget);
-  };
-
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
-  };
-
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
-  };
-
   const iconClasses =
     'hover:text-secondary cursor-pointer ml-2 transition-colors duration-300';
 
@@ -56,12 +40,16 @@ export default function Header() {
           sx={{ display: { xs: 'none', sm: 'block' } }}
         >
           <Container>
-            <Toolbar>
+            <Toolbar disableGutters>
+              <Box className="mr-6">
+                <Link href="/">
+                  <Image src="/logo.png" alt="logo" width={60} height={60} />
+                </Link>
+              </Box>
               <Box sx={{ flexGrow: 1, display: { xs: 'flex' } }}>
                 {pages.map(page => (
                   <Button
                     key={page}
-                    onClick={handleCloseNavMenu}
                     sx={{ my: 2, color: 'white', display: 'block' }}
                     className="hover:text-secondary"
                   >
