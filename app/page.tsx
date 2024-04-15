@@ -1,12 +1,16 @@
 import Header from '@/components/Header';
 import BottomNavigation from '@/components/BottomNavigation';
-import { Metadata } from 'next';
+import HomeHero from '@/components/HomeHero';
+import Container from '@/components/Container';
 
 export default function Home() {
   return (
     <>
       <Header />
-      <main className="flex min-h-screen flex-col items-center justify-between p-24"></main>
+      <main>
+        <HomeHero />
+        {/* <Container></Container> */}
+      </main>
       <BottomNavigation />
     </>
   );

@@ -29,13 +29,17 @@ function HideOnScroll(props: any) {
 }
 
 export default function Header() {
-  const iconClasses =
-    'hover:text-secondary cursor-pointer ml-2 transition-colors duration-300';
+  const iconSX = {
+    marginLeft: '10px',
+    cursor: 'pointer',
+    ':hover': { color: 'secondary.main' },
+    transition: 'color 0.3s ease',
+  };
 
   return (
     <header>
       <HideOnScroll>
-        <AppBar color="transparent">
+        <AppBar color="primary">
           <Container>
             <Toolbar disableGutters>
               <Box className="mr-6">
@@ -59,12 +63,12 @@ export default function Header() {
                 }}
               >
                 <SearchInput />
-                <FavoriteBorderOutlinedIcon className={iconClasses} />
-                <ShoppingBagOutlinedIcon
-                  className={`${iconClasses} hidden sm:block`}
+                <FavoriteBorderOutlinedIcon
+                  sx={{ ...iconSX, display: { xs: 'none', md: 'block' } }}
                 />
+                <ShoppingBagOutlinedIcon sx={iconSX} />
                 <PersonOutlineOutlinedIcon
-                  className={`${iconClasses} hidden sm:block`}
+                  sx={{ ...iconSX, display: { xs: 'none', md: 'block' } }}
                 />
               </Box>
             </Toolbar>

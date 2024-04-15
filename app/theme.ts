@@ -12,3 +12,11 @@ export const theme = createTheme({
     },
   },
 });
+
+// colors: {
+//   primary: '#1B7F79',
+//   secondary: '#FF4858',
+//   primaryAccent: '#00CCC0',
+//   aquaColor: '#72F2EB',
+//   textColor: '#747F7F',
+// },
