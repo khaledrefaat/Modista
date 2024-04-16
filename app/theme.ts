@@ -9,7 +9,11 @@ export const theme = createTheme({
     },
     secondary: {
       main: '#FF4858',
+      light: '#FF6673',
     },
+    // text: {
+    //   primary: '#747F7F',
+    // },
   },
 });
 

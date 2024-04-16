@@ -7,11 +7,11 @@ import BottomNavigationAction from '@mui/material/BottomNavigationAction';
 import Paper from '@mui/material/Paper';
 import { useState } from 'react';
 
-import ShoppingBagOutlinedIcon from '@mui/icons-material/ShoppingBagOutlined';
-import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined';
-import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
-import WidgetsOutlinedIcon from '@mui/icons-material/WidgetsOutlined';
-import StorefrontOutlinedIcon from '@mui/icons-material/StorefrontOutlined';
+import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
+import PersonOutlineIcon from '@mui/icons-material/Person';
+import HomeIcon from '@mui/icons-material/Home';
+import WidgetsIcon from '@mui/icons-material/Widgets';
+import StorefrontIcon from '@mui/icons-material/Store';
 
 export default function FixedBottomNavigation() {
   const [value, setValue] = useState(0);
@@ -40,6 +40,9 @@ export default function FixedBottomNavigation() {
             setValue(newValue);
           }}
           sx={{
+            '& .MuiBottomNavigationAction-root': {
+              color: 'whitesmoke',
+            },
             '& .Mui-selected': {
               color: 'secondary.main',
             },
@@ -52,25 +55,16 @@ export default function FixedBottomNavigation() {
         >
           <BottomNavigationAction
             label="Home"
-            icon={<HomeOutlinedIcon />}
+            icon={<HomeIcon />}
             className=""
           />
-          <BottomNavigationAction
-            label="Categories"
-            icon={<WidgetsOutlinedIcon />}
-          />
-          <BottomNavigationAction
-            label="Store"
-            icon={<StorefrontOutlinedIcon />}
-          />
+          <BottomNavigationAction label="Categories" icon={<WidgetsIcon />} />
+          <BottomNavigationAction label="Store" icon={<StorefrontIcon />} />
           <BottomNavigationAction
             label="My Account"
-            icon={<PersonOutlineOutlinedIcon />}
+            icon={<PersonOutlineIcon />}
           />
-          <BottomNavigationAction
-            label="Cart"
-            icon={<ShoppingBagOutlinedIcon />}
-          />
+          <BottomNavigationAction label="Cart" icon={<ShoppingBagIcon />} />
         </BottomNavigation>
       </Paper>
     </Box>
