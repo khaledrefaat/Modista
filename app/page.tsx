@@ -1,7 +1,8 @@
 import Header from '@/components/Header';
 import BottomNavigation from '@/components/BottomNavigation';
-import HomeHero from '@/components/HomeHero';
+import HomeHero from '@/components/HomePageComponents/HomeHero';
 import Container from '@/components/Container';
+import ModernCollection from '@/components/HomePageComponents/ModernCollection';
 
 export default function Home() {
   return (
@@ -9,7 +10,7 @@ export default function Home() {
       <Header />
       <main>
         <HomeHero />
-        {/* <Container></Container> */}
+        <ModernCollection />
       </main>
       <BottomNavigation />
     </>

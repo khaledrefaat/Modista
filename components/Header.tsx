@@ -1,4 +1,5 @@
 'use client';
+
 import Container from './Container';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -10,7 +11,6 @@ import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlin
 import ShoppingBagOutlinedIcon from '@mui/icons-material/ShoppingBagOutlined';
 import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined';
 
-import { useState } from 'react';
 import SearchInput from './SearchInput';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -49,7 +49,13 @@ export default function Header() {
               </Box>
               <Box sx={{ display: { xs: 'none', sm: 'flex' } }}>
                 {pages.map(page => (
-                  <Button key={page} className="hover:text-secondary">
+                  <Button
+                    key={page}
+                    sx={{
+                      color: 'whitesmoke',
+                      ':hover': { color: 'secondary.main' },
+                    }}
+                  >
                     {page}
                   </Button>
                 ))}
