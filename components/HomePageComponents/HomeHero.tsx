@@ -3,10 +3,11 @@ import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import Container from '../Container';
 import CustomButton from '../CustomButton';
+import classes from './HomeHero.module.css';
 
 export default function HomeHero() {
   return (
-    <section className="hero-section">
+    <section className={classes['hero-section']}>
       <Container>
         <Grid
           sx={{
