@@ -1,5 +1,6 @@
 import Box from '@mui/material/Box';
 import Image from 'next/image';
+import CustomButton from '../CustomButton';
 
 interface Props {
   imgSrc: string;
@@ -12,11 +13,12 @@ export default function ModernCollectionCard(props: Props) {
   return (
     <Box
       sx={{
-        backgroundColor: 'var(--background-desktop)',
+        backgroundColor: 'var(--background-light)',
         height: {
           sm: props.height,
           xs: 300,
         },
+        position: 'relative',
       }}
       mb={props.mb || 0}
     >
@@ -27,6 +29,7 @@ export default function ModernCollectionCard(props: Props) {
         height={300}
         className="full"
       />
+      <CustomButton sticky>Shop Now</CustomButton>
     </Box>
   );
 }

@@ -14,10 +14,13 @@ export default function HomeHero() {
             display: { xs: 'flex' },
             justifyContent: 'center',
             alignItems: 'center',
-            gap: 12,
+            gap: {
+              xs: 0,
+              lg: 12,
+            },
             flexDirection: {
               xs: 'column-reverse',
-              md: 'row',
+              sm: 'row',
             },
             position: 'relative',
           }}
@@ -29,20 +32,20 @@ export default function HomeHero() {
             sx={{
               position: {
                 xs: 'absolute',
-                md: 'relative',
+                sm: 'relative',
               },
               top: '50%',
               transform: {
                 xs: 'translateY(-30%)',
-                md: 'none',
+                sm: 'none',
               },
               textAlign: {
                 xs: 'center',
-                md: 'left',
+                sm: 'left',
               },
               color: {
                 xs: 'whitesmoke',
-                md: 'inherit',
+                sm: 'inherit',
               },
             }}
           >

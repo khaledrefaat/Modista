@@ -3,8 +3,11 @@
   --primary-light: '#00CCC0';
   --secondary-main: '#FF4858';
   --primary-light: '#FF6673';
-  --background-mobile: rgba(27, 127, 121, 0.3);
-  --background-desktop: rgba(27, 127, 121, 0.1);
+  --background: rgba(27, 127, 121, 0.3);
+  --background-light: rgba(27, 127, 121, 0.1);
+  --background-1: rgba(234, 213, 200, 0.5);
+  --background-2: rgba(40, 42, 46, 0.3);
+  --background-3: rgba(13, 54, 52, 0.5);
 }
 
 body {
@@ -17,5 +20,15 @@ body {
 }
 
 .object-cover {
-  object-fit: cover;
+  object-fit: contain;
 }
+
+.w-100 {
+  width: 100%;
+}
+
+/* @media only screen and (min-width: 900px) {
+    .full {
+      object-fit: contain;
+    }
+  } */

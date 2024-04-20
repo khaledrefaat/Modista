@@ -4,7 +4,23 @@ const Container: React.FC<{
   children: React.ReactNode;
   sx?: { [key: string]: string };
 }> = ({ children, sx }) => {
-  return <MuiContainer sx={sx}>{children}</MuiContainer>;
+  return (
+    <MuiContainer
+      maxWidth={false}
+      sx={{
+        ...sx,
+        padding: {
+          xs: '0 1rem',
+          sm: '0 2rem',
+          md: '0 3rem',
+          lg: '0 4rem',
+          xl: '0 5rem',
+        },
+      }}
+    >
+      {children}
+    </MuiContainer>
+  );
 };
 
 export default Container;
