@@ -17,7 +17,7 @@ const brands = {
 const DUMMY_DATA = [
   {
     brand: brands.AmericanEagle,
-    title: 'AE Super Soft Logo Graphic T-Shirt',
+    title: 'Logo Graphic T-Shirt',
     imagesUrl: [
       '/products/eagle-1.jpg',
       '/products/eagle-2.jpg',
@@ -29,7 +29,7 @@ const DUMMY_DATA = [
   },
   {
     brand: brands.AmericanEagle,
-    title: 'AE Super Soft Logo Graphic T-Shirt',
+    title: 'Logo Graphic T-Shirt',
     imagesUrl: [
       '/products/eagle-black-1.jpg',
       '/products/eagle-black-2.jpg',
@@ -41,7 +41,7 @@ const DUMMY_DATA = [
   },
   {
     brand: brands.AmericanEagle,
-    title: 'AE Super Soft Logo Graphic T-Shirt',
+    title: 'Logo Graphic T-Shirt',
     imagesUrl: [
       '/products/eagle-white-1.jpg',
       '/products/eagle-white-2.jpg',
@@ -65,7 +65,7 @@ const DUMMY_DATA = [
   },
   {
     brand: brands.Puma,
-    title: 'Run Favorite SS Tee',
+    title: 'Run Favorite',
     imagesUrl: [
       '/products/puma-fit-1.jpg',
       '/products/puma-fit-2.jpg',
@@ -77,7 +77,7 @@ const DUMMY_DATA = [
   },
   {
     brand: brands.Nike,
-    title: 'Force Swoosh Basketball T-Shirt',
+    title: 'Basketball T-Shirt',
     imagesUrl: [
       '/products/nike-force-1.jpg',
       '/products/nike-force-2.jpg',
@@ -89,7 +89,7 @@ const DUMMY_DATA = [
   },
   {
     brand: brands.Nike,
-    title: 'FC Seasonal T-Shirt',
+    title: 'FC T-Shirt',
     imagesUrl: [
       '/products/nike-fc-1.jpg',
       '/products/nike-fc-2.jpg',
@@ -100,15 +100,63 @@ const DUMMY_DATA = [
   },
   {
     brand: brands.Nike,
-    title: 'Dri-FIT Indy Light-Support Padded Logo Sports Bra',
+    title: 'Dri-FIT Indy',
     imagesUrl: [
       '/products/nike-dri-1.jpg',
       '/products/nike-dri-2.jpg',
       '/products/nike-dri-3.jpg',
       '/products/nike-dri-4.jpg',
     ],
-    price: '180.00',
+    price: '175.00',
     id: '8db9176a-f8a7-56c6-897e-71851f2392ea',
+  },
+
+  {
+    brand: brands.Nike,
+    title: 'Tennis Dress',
+    imagesUrl: [
+      '/products/nike-count-1.jpg',
+      '/products/nike-count-2.jpg',
+      '/products/nike-count-3.jpg',
+      '/products/nike-count-4.jpg',
+    ],
+    price: '190.00',
+    id: '012af6f1-c436-5e08-90fd-340b2395b958',
+  },
+  {
+    brand: brands.Nileton,
+    title: 'Sportswear Leggings',
+    imagesUrl: [
+      '/products/nileton-sportswear-1.jpg',
+      '/products/nileton-sportswear-2.jpg',
+      '/products/nileton-sportswear-3.jpg',
+      '/products/nileton-sportswear-4.jpg',
+    ],
+    price: '210.00',
+    id: '012af6f1-c436-5e08-90fd-340b2395b958',
+  },
+  {
+    brand: brands.Nileton,
+    title: 'High Waist Sportswear',
+    imagesUrl: [
+      '/products/nileton-high-1.jpg',
+      '/products/nileton-high-2.jpg',
+      '/products/nileton-high-3.jpg',
+    ],
+    price: '175.00',
+    id: '4269b923-600e-541b-a303-377a985aba51',
+  },
+  {
+    brand: brands.AlNasser,
+    title: '19008 Cardigan',
+    imagesUrl: [
+      '/products/nasser-cardigan-1.jpg',
+      '/products/nasser-cardigan-2.jpg',
+      '/products/nasser-cardigan-3.jpg',
+      '/products/nasser-cardigan-4.jpg',
+    ],
+    price: '225.00',
+    id: '464dd320-b236-5f4d-b002-c7c0beede018',
   },
 ];
 
