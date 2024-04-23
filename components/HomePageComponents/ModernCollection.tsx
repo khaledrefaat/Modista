@@ -8,40 +8,44 @@ export default function ModernCollection() {
   return (
     <section>
       <Container sx={{ marginY: '3rem' }}>
-        {/* <Box
+        <Box
           sx={{
-            paddingX: {
+            marginBottom: '2rem',
+            marginLeft: {
               lg: '7rem',
-              md: '5rem',
+              md: '1rem',
               xs: '0',
             },
+            textAlign: {
+              sm: 'left',
+              xs: 'center',
+            },
           }}
-        > */}
-        <Box sx={{ marginBottom: '2rem' }}>
+        >
           <Typography variant="caption" sx={{ textTransform: 'uppercase' }}>
             save up to 40%
           </Typography>
           <Typography variant="h4">2024 Modern collection</Typography>
         </Box>
-        <Grid container gap={5}>
-          <Grid xs={12} sm={4} lg={3}>
+        <Grid container spacing={3} sx={{ justifyContent: 'center' }}>
+          <Grid xs={12} sm={5} md={5}>
             <ModernCollectionCard
               imgSrc="/collection-1.png"
               alt="collection"
               mb={3}
-              height={250}
+              height={275}
             />
             <ModernCollectionCard
               imgSrc="/collection-9.png"
               alt="collection"
-              height={250}
+              height={275}
             />
           </Grid>
-          <Grid xs={12} sm={7} lg={5}>
+          <Grid xs={12} sm={7} md={6}>
             <ModernCollectionCard
               imgSrc="/collection-3.png"
               alt="collection"
-              height={500 + 24}
+              height={550 + 24}
             />
           </Grid>
         </Grid>

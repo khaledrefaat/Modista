@@ -9,17 +9,28 @@ export default function NewArrivals() {
   return (
     <section>
       <Container>
-        <Typography variant="h4">New Arrivals</Typography>
+        <Typography
+          variant="h4"
+          sx={{
+            textAlign: {
+              xs: 'center',
+              md: 'left',
+            },
+          }}
+        >
+          New Arrivals
+        </Typography>
         <Grid
           container
-          gap={6}
+          spacing={2}
           mb={5}
+          mt={5}
           sx={{
             justifyContent: { xs: 'center', lg: 'flex-start' },
           }}
         >
           {DUMMY_DATA.map(product => (
-            <Grid xs={12} sm={4} md={4} lg={2.5} key={product.id}>
+            <Grid xs={12} sm={6} md={4} lg={3} key={product.id}>
               <ProductCard key={product.id} product={product} />
             </Grid>
           ))}

@@ -46,7 +46,7 @@ function FeaturesBox(props: {
     <Grid
       xs={12}
       sm={6}
-      lg={3}
+      md={3}
       sx={{
         display: 'flex',
         flexDirection: 'column',
@@ -95,7 +95,7 @@ export default function Features() {
         >
           We Provide best customer experience
         </Typography>
-        <Grid container mt={5} justifyContent="center">
+        <Grid container mt={5} spacing={4} justifyContent="center">
           {features.map(feature => (
             <FeaturesBox key={feature.id} {...feature} />
           ))}
