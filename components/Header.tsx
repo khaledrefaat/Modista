@@ -40,7 +40,7 @@ export default function Header() {
     <header>
       <HideOnScroll>
         <AppBar color="primary">
-          <Container>
+          <Container noMargin>
             <Toolbar disableGutters>
               <Box className="mr-6">
                 <Link href="/">

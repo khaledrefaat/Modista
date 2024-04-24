@@ -38,7 +38,14 @@ export default function ProductCard(props: Product) {
         height={300}
         style={{ borderRadius: '12px', width: '100%' }}
       />
-      <Box sx={{ display: 'flex', justifyContent: 'space-between' }} mt={1}>
+      <Box
+        sx={{
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+        }}
+        mt={1}
+      >
         <Typography gutterBottom variant="h6" component="h6">
           {title}
         </Typography>

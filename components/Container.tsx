@@ -3,7 +3,8 @@ import { Container as MuiContainer } from '@mui/material';
 const Container: React.FC<{
   children: React.ReactNode;
   sx?: { [key: string]: string };
-}> = ({ children, sx }) => {
+  noMargin?: boolean;
+}> = ({ children, sx, noMargin }) => {
   return (
     <MuiContainer
       maxWidth={false}
@@ -16,6 +17,7 @@ const Container: React.FC<{
           lg: '0 4rem',
           xl: '0 5rem',
         },
+        marginY: noMargin ? 0 : '5rem',
       }}
     >
       {children}

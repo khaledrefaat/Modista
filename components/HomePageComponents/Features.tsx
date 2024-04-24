@@ -70,7 +70,7 @@ function FeaturesBox(props: {
       >
         {props.icon}
       </Button>
-      <Typography mt={2} variant="h6" fontWeight={600}>
+      <Typography mt={2} color="primary" variant="h6" fontWeight={600}>
         {props.title}
       </Typography>
       <Typography variant="body1" maxWidth="300px">

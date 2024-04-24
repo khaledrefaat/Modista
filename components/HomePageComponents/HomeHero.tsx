@@ -67,7 +67,7 @@ export default function HomeHero() {
           </Grid>
           <Grid item xs={12} lg={6} width={375} height={550}>
             <Image
-              src="/hero.png"
+              src="/hero-3.png"
               alt="hero"
               width={375}
               height={550}

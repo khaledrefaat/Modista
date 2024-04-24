@@ -49,7 +49,6 @@ export default function ModernCollection() {
             />
           </Grid>
         </Grid>
-        {/* </Box> */}
       </Container>
     </section>
   );
